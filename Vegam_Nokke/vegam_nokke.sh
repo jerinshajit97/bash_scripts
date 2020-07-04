@@ -20,7 +20,9 @@ if [ $(cat $var.txt | wc -l) -gt 0 ]
 then
 echo "[+] enumerating the ports"
 a=$(cat $var.txt | tr '\n' ,)
-nmap 192.168.225.1 -p $(echo "${a::-1}") -A >> $var.txt
+nmap 192.168.225.1 -p $(echo "${a::-1}") -A > $var.txt
+
+echo "[+] generating report"
 cat $var.txt
 fi
 
