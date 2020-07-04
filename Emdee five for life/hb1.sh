@@ -11,7 +11,3 @@ md=$(echo -n $str | md5sum | awk '{print $1}' )
 echo $md
 
 curl -d "hash=$(echo $md)" -X POST -b head.txt http://docker.hackthebox.eu:32038/
-
-#hash=$md
-#echo $hash
-#cat head.txt
