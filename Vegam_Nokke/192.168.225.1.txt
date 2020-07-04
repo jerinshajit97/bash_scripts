@@ -1,0 +1,36 @@
+53
+80
+5037
+5555
+6666
+7777
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-04 22:09 IST
+Nmap scan report for embms.jio.local (192.168.225.1)
+Host is up (0.0041s latency).
+
+PORT     STATE    SERVICE VERSION
+53/tcp   filtered domain
+80/tcp   open     http    lighttpd 1.4.35
+|_http-server-header: lighttpd/1.4.35
+|_http-title: 403 - Forbidden
+5037/tcp filtered unknown
+5555/tcp filtered freeciv
+6666/tcp open     irc?
+| fingerprint-strings: 
+|   SIPOptions: 
+|_    ERROR
+|_irc-info: Unable to open connection
+7777/tcp open     cbt?
+| fingerprint-strings: 
+|   SIPOptions: 
+|_    ERROR
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6666-TCP:V=7.80%I=7%D=7/4%Time=5F00B12B%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,7,"ERROR\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7777-TCP:V=7.80%I=7%D=7/4%Time=5F00B121%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,7,"ERROR\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 206.97 seconds
